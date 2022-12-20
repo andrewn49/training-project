@@ -1,0 +1,124 @@
+body{
+    background-color: #3B3A37;
+}
+
+h1{
+    margin-top: 300px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    overflow: hidden;
+    float: left;
+    padding: 90px 10px;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    top: 0;
+    z-index: 99;
+    background-color: #E0A929;
+}
+
+.navbutton{
+    float: left;
+    color: #EBEBEB;
+    background-color: transparent;
+    text-align: center;
+    padding: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Verdana;
+    font-weight: bold;
+    line-height: 25px;
+    border-style: none;
+    border-radius: 4px;
+    transition: 0.4s;
+}
+
+.navbutton:hover{
+    background-color: #ac811e;
+}
+
+.navbutton:active{
+    background-color:  #3B3A37;
+}
+
+.userprompt{
+    margin-top: 290px;
+    text-align: center;
+    color:#EBEBEB;
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.custno{
+    font-size: 20px;
+    text-align: center;
+    color:#EBEBEB;
+    background-color: transparent;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 4px solid #ebebeb;
+}
+
+.send{
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #EBEBEB;
+    padding: 15px;
+    border-radius:4px;
+    font-size: 20px;
+    font-family: Verdana;
+    font-weight: bold;
+    border: none;
+    width: 25%;
+    background-color: #E0A929;
+}
+
+.send:hover{
+    background-color:#ac811e;
+}
+
+.actor-list{
+    margin-top: 290px;
+    text-align: center;
+    color: #EBEBEB;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#logo{
+    margin-left: 25px;
+    padding: 15px;
+    font-size: 35px;
+    line-height: 25px;
+    font-family: monospace;
+    font-weight: bolder;
+    transition: 0.4s;
+}
+
+#logo:hover{
+    background-color:transparent;
+}
+
+#navbar-right{
+    float: right;
+    margin-right: 100px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
