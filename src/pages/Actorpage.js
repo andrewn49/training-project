@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ActorList from './ActorList';
+import ActorList from './components/ActorList';
 
 function ActorPage() {
     const [actor, setActor] = useState(null)
@@ -10,7 +10,6 @@ function ActorPage() {
                 return response.json()
             })
             .then(data => {
-                console.log(data)
                 setActor(data);
             })
     }, [])

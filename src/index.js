@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import Navbar from "./Navbar";
 import Userprompt from "./pages/Userprompt";
 import ActorPage from "./pages/Actorpage";
+import Watchlist from './pages/Watchpage';
+import FilmPage from './pages/Filmpage';
+import CatPage from './pages/Catpage';
 
 function Page() {
     return (
@@ -16,6 +20,12 @@ function Page() {
                         <Route index exact path="/" element={<Userprompt />}>
                         </Route>
                         <Route exact path="/actors" element={<ActorPage />}>
+                        </Route>
+                        <Route exact path="/films" element={<FilmPage />}>
+                        </Route>
+                        <Route exact path="/categories" element={<CatPage />}>
+                        </Route>
+                        <Route exact path="/watchlist" element={<Watchlist />}>
                         </Route>
                     </Routes>
                 </div>
