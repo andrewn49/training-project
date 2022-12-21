@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card'
-import placeholder from "./placeholder.png"
+import placeholder from "./placeholder3.png"
 
 function Watchedmovies(props) {
     if (props.films.length > 0) {
@@ -32,7 +32,7 @@ export default Watchedmovies;
 
 function removeEntry(filmid) {
     var custid = sessionStorage.getItem("userid")
-    fetch('http://localhost:8080/home/removewatched/' + custid + '/' + filmid, { method: 'DELETE' })
+    fetch('http://ec2-34-192-43-106.compute-1.amazonaws.com:8080/home/removewatched/' + custid + '/' + filmid, { method: 'DELETE' })
     window.location.reload();
 }
 

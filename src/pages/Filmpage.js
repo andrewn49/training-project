@@ -1,7 +1,22 @@
-function FilmPage(){
-    return(
+import React, { useEffect, useState } from 'react';
+import FilmList from './components/FilmList';
+
+function FilmPage() {
+    const [film, setFilm] = useState(null)
+
+    useEffect(() => {
+        fetch("http://ec2-34-192-43-106.compute-1.amazonaws.com:8080/home/allfilms")
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                setFilm(data);
+            })
+    }, [])
+
+    return (
         <div>
-            <h2 style={{marginTop: "300px"}}>this is a film page</h2>
+            {film && <FilmList films={film} />}
         </div>
     )
 }

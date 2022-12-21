@@ -7,7 +7,7 @@ const Watchlist = ({ }) => {
     const [movie, setMovie] = useState(null)
 
     useEffect(() => {
-        fetch("http://localhost:8080/home/haswatched/" + custid)
+        fetch("http://ec2-34-192-43-106.compute-1.amazonaws.com:8080/home/haswatched/" + custid)
             .then(response => {
                 return response.json()
             })
@@ -16,14 +16,11 @@ const Watchlist = ({ }) => {
             })
     }, [])
 
-
     return (
         <div>
             {movie && <Watchedmovies films={movie} />}
         </div>
     )
-
-
 }
 
 export default Watchlist;

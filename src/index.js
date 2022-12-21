@@ -9,6 +9,9 @@ import ActorPage from "./pages/Actorpage";
 import Watchlist from './pages/Watchpage';
 import FilmPage from './pages/Filmpage';
 import CatPage from './pages/Catpage';
+import FilmActorPage from './pages/FilmActorPage';
+import CatFilmPage from './pages/CatFilmpage';
+import ActorFilmPage from './pages/ActorFilmpage';
 
 function Page() {
     return (
@@ -26,6 +29,12 @@ function Page() {
                         <Route exact path="/categories" element={<CatPage />}>
                         </Route>
                         <Route exact path="/watchlist" element={<Watchlist />}>
+                        </Route>
+                        <Route exact path="/filmactors" element={<FilmActorPage />}>
+                        </Route>
+                        <Route exact path="/catfilms" element={<CatFilmPage />}>
+                        </Route>
+                        <Route exact path="/actorfilms" element={<ActorFilmPage />}>
                         </Route>
                     </Routes>
                 </div>

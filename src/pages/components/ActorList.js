@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card'
-import placeholder from "./placeholder.png"
+import { Link } from 'react-router-dom';
+import placeholder from "./placeholder1.png"
 
 function ActorList(props) {
     return (
@@ -9,7 +10,7 @@ function ActorList(props) {
                     <Card.Img className="placeholder" src={placeholder} />
                     <Card.Title className="cardtitle">{actor.firstname} {actor.lastname}</Card.Title>
                     <Card.Subtitle className="cardsub">{actor.actorid}</Card.Subtitle>
-                    <button className="remove-button">View Films</button>
+                    <Link onClick={() => setActorId(actor.actorid)} to="/actorfilms" className="remove-button">View Films</Link>
                 </Card>
             ))}
         </div>
@@ -17,3 +18,7 @@ function ActorList(props) {
 }
 
 export default ActorList;
+
+function setActorId(actorid){
+    sessionStorage.setItem("actorid", actorid)
+}
